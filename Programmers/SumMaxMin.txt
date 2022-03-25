@@ -5,3 +5,7 @@ FROM ANIMAL_INS;
 -- 최솟값 구하기
 SELECT MIN(DATETIME)
 FROM ANIMAL_INS;
+
+-- 동물 수 구하기 : error
+SELECT SUM(COUNT(NAME)) AS count
+FROM ANIMAL_INS;
