@@ -7,8 +7,8 @@ FROM ANIMAL_INS
 ORDER BY ANIMAL_ID DESC;
 
 -- 아픈 동물 찾기
-SELECT animal_id, name
-FROM animal_ins
+SELECT ANIMAL_ID, NAME
+FROM ANIMAL_INS
 WHERE intake_condition = 'Sick';
 
 -- 어린 동물 찾기
