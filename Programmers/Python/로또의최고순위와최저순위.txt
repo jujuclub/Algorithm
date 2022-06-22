@@ -1,3 +1,13 @@
 def solution(lottos, win_nums):
-    answer = []
+    rank = [6, 6, 5, 4, 3, 2, 1]
+    unknown = lottos.count(0)
+    count = 0
+    
+    for i in lottos:
+        if i in win_nums:
+            count += 1
+            
+    answer = [rank[unknown + count], rank[count]]
     return answer
+
+(참고 : https://velog.io/@j_wisdom_h/CodingTest%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B81%EC%9D%BC%EC%B0%A8220528)
