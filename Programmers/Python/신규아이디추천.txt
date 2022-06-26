@@ -1,5 +1,13 @@
-def solution(new_id):
-    answer = ''
-    return answer
+import re
 
-    next time
+def solution(new_id):
+    sj = new_id # subject 줄임말 sj
+    sj = sj.lower() # 1단계
+    sj = re.sub('[^a-z0-9\-_.]', '', sj) # 2단계
+    sj = re.sub('\.+', '.', sj) # 3단계
+    sj = re.sub('^[.]|[.]$', '', sj) # 4단계
+    sj = 'a' if len(sj) == 0 else sj[:15] # 5단계 & 6단계 반
+    sj = re.sub('^[.]|[.]$', '', sj) # 6단계 반
+    sj = sj if len(sj) > 2 else sj + "".join([sj[-1] for i in range(3-len(sj))])
+    answer = sj
+    return answer
