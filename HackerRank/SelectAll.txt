@@ -1,1 +1,2 @@
-next time
+SELECT *
+FROM CITY;
