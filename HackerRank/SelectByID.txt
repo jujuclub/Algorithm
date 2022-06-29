@@ -1,1 +1,3 @@
-next time
+SELECT *
+FROM CITY
+WHERE ID = 1661;
