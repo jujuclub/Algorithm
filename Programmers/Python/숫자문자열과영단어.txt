@@ -1,3 +1,9 @@
 def solution(s):
-    answer = 0
+    str_arr = ['zero', 'one', 'two', 'three', 'four',
+               'five', 'six', 'seven', 'eight', 'nine']
+    for i in range(10):
+        s = s.replace(str_arr[i], str(i))
+    answer = int(s)
     return answer
+
+(참고 : https://caputdraconis.tistory.com/126)
