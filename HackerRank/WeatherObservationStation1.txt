@@ -1,1 +1,2 @@
-next time
+SELECT CITY, STATE
+FROM STATION;
