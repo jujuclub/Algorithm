@@ -1,27 +1,27 @@
-# 한 번 터질 때 인형은 2개씩 사라짐
 def solution(board, moves):
-    box = []
-    stack = []
     answer = 0
+    basket = [0]
     
-    for i in range(len(board)):
-        stack.append(a[i] for a in board)
-        
-    for j in range(len(board)):
-        while 0 in stack[j]:
-            stack[j].remove(0)
-        stack[j].reverse()
-        
-    for k in moves:
-        if len(stack[k-1]) != 0:
-            box.append(stack[k-1].pop())
-            if len(box) > 1:
-                for n in range(1, len(box)):
-                    if box[n-1] == box[n]:
-                        box.pop()
-                        box.pop()
-                        answer += 1
+    N = len(board)
+    idx_list = [0 for _ in range(N)]
     
-    return answer*2
+    for i in range(N):
+        for j in range(N):
+            if board[j][i] != 0:
+                continue
+            idx_list[i] += 1
+            
+    for move in moves:
+        if idx_list[move-1] != N:
+            if board[idx_list[move-1]][move-1] != basket[-1]:
+                basket.append(board[idx_list[move-1]][move-1])
+                idx_list[move-1] += 1
+            else:
+                basket.pop()
+                idx_list[move-1] += 1
+                answer += 2
+                
+    return answer
 
-    next time
+
+(참고 : https://somjang.tistory.com/entry/Programmers-2019-%EC%B9%B4%EC%B9%B4%EC%98%A4-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EA%B2%A8%EC%9A%B8-%EC%9D%B8%ED%84%B4%EC%8B%AD-%ED%81%AC%EB%A0%88%EC%9D%B8-%EC%9D%B8%ED%98%95%EB%BD%91%EA%B8%B0-%EA%B2%8C%EC%9E%84-Python)
