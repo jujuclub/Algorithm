@@ -2,3 +2,5 @@ def solution(absolutes, signs):
     answer = 0
     for i, absolute in enumerate(absolutes):
     return answer
+
+(참고 : https://huembuemhuem.tistory.com/188)
