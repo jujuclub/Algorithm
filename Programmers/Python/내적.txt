@@ -1,1 +1,9 @@
-next time
+def solution(a, b):
+    answer = 0
+    
+    for a_val, b_val in zip(a, b):
+        answer += a_val * b_val
+        
+    return answer
+
+(참고 : https://somjang.tistory.com/entry/Programmers-%EC%9B%94%EA%B0%84-%EC%BD%94%EB%93%9C-%EC%B1%8C%EB%A6%B0%EC%A7%80-%EC%8B%9C%EC%A6%8C1-%EB%82%B4%EC%A0%81-Python)
