@@ -1,1 +1,5 @@
-next time
+SELECT DISTINCT(CITY)
+FROM STATION
+WHERE CITY REGEXP '^[aeiou]'
+
+(참고 : https://junyoung-developer.tistory.com/m/34)
