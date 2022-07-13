@@ -1,1 +1,11 @@
-next time
+def solution(array, commands):
+    answer = []
+    
+    for a in commands:
+        array2 = array[ a[0]-1 : a[1] ] # i번째에서 j번째까지 자르기
+        array2.sort() # 정렬하기
+        answer.append(array2[ a[2]-1 ]) # k번째 값 집어넣기
+    
+    return answer
+
+(참고 : https://datahub.tistory.com/10)
