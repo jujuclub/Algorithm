@@ -1,1 +1,27 @@
-next time
+def solution(n, lost, reserve):
+    
+    # 빌려줄 수 있는 사람
+    set_lender = list(set(reserve).difference(set(lost)))
+    
+    # 진짜로 잃어버린 사람들
+    set_lost = list(set(lost).difference(set(reserve)))
+    
+    # 수업을 들을 수 없는 사람들
+    really_lost = []
+    
+    for i in range(len(set_lost)):
+        print(i)
+        
+        if set_lost[i] - 1 in set_lender:
+            set_lender.remove(set_lost[i] - 1)
+            
+        elif set_lost[i] + 1 in set_lender:
+            set_lender.remove(set_lost[i] + 1)
+            
+        else:
+            really_lost.append(set_lost[i])
+    
+    answer = n - len(really_lost)
+    return answer
+
+(참고 : https://data-marketing-bk.tistory.com/47)
