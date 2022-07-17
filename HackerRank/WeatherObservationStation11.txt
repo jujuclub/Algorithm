@@ -1,1 +1,4 @@
-next time
+SELECT DISTINCT(CITY)
+FROM STATION
+WHERE NOT (CITY REGEXP '^[aeiou]')
+OR NOT (CITY REGEXP '[aeiou]$');
