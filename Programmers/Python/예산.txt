@@ -1,1 +1,16 @@
-next time
+import heapq
+
+def solution(d, budget):
+    answer = 0
+    heapq.heapify(d)
+    
+    while d:
+        if budget - d[0] >= 0:
+            budget -= heapq.heappop(d)
+            answer += 1
+        else:
+            return answer
+        
+    return answer
+
+(참고 : https://ninano1109.tistory.com/20)
