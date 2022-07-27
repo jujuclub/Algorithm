@@ -1,0 +1,5 @@
+select count(*) as count
+from city
+where population > 100000;
+
+(참고 : https://lhoiktiv.tistory.com/534)
