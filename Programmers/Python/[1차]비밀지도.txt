@@ -1,0 +1,20 @@
+def solution(n, arr1, arr2):
+    answer = []
+    arr1_bin = []
+    arr2_bin = []
+    for i in range(n):
+        arr1_bin.append(bin(arr1[i])[2:]) # 2진수로 변환
+        arr2_bin.append(bin(arr2[i])[2:])
+        arr1_bin[i] = ('0' * (n-len(arr1_bin[i]))) + arr1_bin[i] # 앞에 0 붙여주기
+        arr2_bin[i] = ('0' * (n-len(arr2_bin[i]))) + arr2_bin[i]
+        
+        temp = ''
+        for p in range(n):
+            if arr1_bin[i][p] == '1' or arr2_bin[i][p] == '1':
+                temp += '#'
+            elif arr1_bin[i][p] == '0' and arr2_bin[i][p] == '0':
+                temp += ' '
+        answer.append(temp)
+    return answer
+
+(참고 : https://velog.io/@godiva7319/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-Level1-1%EC%B0%A8-%EB%B9%84%EB%B0%80%EC%A7%80%EB%8F%84-Python)
