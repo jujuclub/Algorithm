@@ -1,0 +1,11 @@
+def solution(s):
+    answer = ''
+    
+    if (len(s)%2): # 홀수
+        answer = s[len(s)//2]
+    else:
+        answer = s[len(s)//2 - 1] + s[len(s)//2]
+    
+    return answer
+
+(참고 : https://sindh718.tistory.com/62)
