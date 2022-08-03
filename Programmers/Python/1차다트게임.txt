@@ -1,3 +1,32 @@
 def solution(dartResult):
-    answer = 0
+    n = ''
+    score = []
+    
+    for i in dartResult:
+        if i.isnumeric():
+            n += i
+        elif i == 'S':
+            n = int(n)**1
+            score.append(n)
+            n = ''
+        elif i == 'D':
+            n = int(n)**2
+            score.append(n)
+            n = ''
+        elif i == 'T':
+            n = int(n)**3
+            score.append(n)
+            n = ''
+        elif i == '*':
+            if len(score) > 1:
+                score[-2] = score[-2] * 2
+                score[-1] = score[-1] * 2
+            else:
+                score[-1] = score[-1] * 2
+        elif i == '#':
+            score[-1] = score[-1] * -1
+    
+    answer = sum(score)
     return answer
+
+(참고 : https://velog.io/@godiva7319/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-Level1-1%EC%B0%A8-%EB%8B%A4%ED%8A%B8-%EA%B2%8C%EC%9E%84-Python)
