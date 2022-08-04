@@ -1,0 +1,10 @@
+def solution(arr):
+    answer = []
+    for i in range(len(arr)):
+        if i == 0:
+            answer.append(arr[i]) # 첫 숫자는 넣는다
+        elif arr[i] != arr[i-1]: # 다음부터는 전 숫자랑 비교한다
+            answer.append(arr[i])
+    return answer
+
+(참고 : https://velog.io/@joygoround/test-%EA%B0%99%EC%9D%80-%EC%88%AB%EC%9E%90%EB%8A%94-%EC%8B%AB%EC%96%B4-%ED%8C%8C%EC%9D%B4%EC%8D%AC)
