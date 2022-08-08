@@ -1,0 +1,6 @@
+select (months * salary) as earnings, count(*)
+from employee
+group by earnings
+order by earnings desc limit 1;
+
+(참고 : https://mjs1995.tistory.com/107)
