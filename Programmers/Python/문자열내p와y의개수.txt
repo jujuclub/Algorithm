@@ -1,0 +1,18 @@
+def solution(s):
+    answer = True
+    
+    p = 0
+    y = 0
+    
+    for i in s:
+        if (i == 'p' or i == 'P'):
+            p += 1
+        elif (i == 'y' or i == 'Y'):
+            y += 1
+        
+    if (p != y):
+        answer = False
+
+    return answer
+
+(참고 : https://velog.io/@htchoi1006/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EB%AC%B8%EC%9E%90%EC%97%B4-%EB%82%B4-p%EC%99%80-y%EC%9D%98-%EA%B0%9C%EC%88%98)
