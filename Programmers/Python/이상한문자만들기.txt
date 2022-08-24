@@ -1,0 +1,16 @@
+def solution(s):
+    answer = ''
+    new_list = s.split(' ')
+    
+    for i in new_list:
+        for j in range(len(i)):
+            if j % 2 == 0:
+                answer += i[j].upper()
+            else:
+                answer += i[j].lower()
+                
+        answer += ' '
+    
+    return answer[0:-1]
+
+(참고 : https://velog.io/@falling_star3/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-Level1-%EC%9D%B4%EC%83%81%ED%95%9C-%EB%AC%B8%EC%9E%90-%EB%A7%8C%EB%93%A4%EA%B8%B0)
