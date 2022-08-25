@@ -1,0 +1,6 @@
+def solution(n):
+    answer = sum(list(map(int, str(n))))
+
+    return answer
+
+(참고 : https://it-garden.tistory.com/219)
