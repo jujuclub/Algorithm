@@ -1,0 +1,5 @@
+def solution(arr):
+    answer = sum(arr) / len(arr)
+    return answer
+
+(참고 : https://it-garden.tistory.com/227)
