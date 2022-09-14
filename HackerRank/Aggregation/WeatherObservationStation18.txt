@@ -1,4 +1,4 @@
-SELECT 
+SELECT ROUND(ABS(MIN(LAT_N) - MAX(LAT_N)) + ABS(MIN(LONG_W) - MAX(LONG_W)), 4)
 FROM STATION;
 
 (참고 : https://mjs1995.tistory.com/92)
