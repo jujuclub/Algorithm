@@ -1,0 +1,5 @@
+def solution(num):
+    answer = 0
+    return answer
+
+(참고 : https://wooaoe.tistory.com/76)
