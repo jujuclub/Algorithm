@@ -1,0 +1,12 @@
+def solution(phone_number):
+    answer = ''
+
+    phone_number_len = len(phone_number)
+
+    answer = '*' * (phone_number_len - 4)
+
+    answer += phone_number[-4:]
+
+    return answer
+
+(참고 : https://somjang.tistory.com/entry/Programmers-%ED%95%B8%EB%93%9C%ED%8F%B0-%EB%B2%88%ED%98%B8-%EA%B0%80%EB%A6%AC%EA%B8%B0-Python)
