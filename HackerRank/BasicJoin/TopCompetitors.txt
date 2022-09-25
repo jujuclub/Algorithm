@@ -1,3 +1,7 @@
 
+FROM Submission Submission
+    INNER JOIN Challenges C ON S.challenge_id = C.challenge_id
+    INNER JOIN Difficulty D ON C.difficulty_level = D.difficulty_level
+    
 
 (참고 : https://techblog-history-younghunjo1.tistory.com/164)
