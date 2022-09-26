@@ -1,0 +1,7 @@
+a, b = map(int, input().strip().split(' '))
+for i in range(b):
+    for j in range(a):
+        print('*', end='')
+    print()
+
+(참고 : https://velog.io/@joygoround/test-%EC%A7%81%EC%82%AC%EA%B0%81%ED%98%95-%EB%B3%84%EC%B0%8D%EA%B8%B0-python)
