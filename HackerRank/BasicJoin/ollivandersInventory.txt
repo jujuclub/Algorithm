@@ -1,4 +1,7 @@
 SELECT W.id, P.age, W.coins_needed, W.power
 FROM Wands W
   INNER JOIN Wands_Property P ON W.code = P.code
+WHERE P.is_evil = 0
+AND W.coins_needed = (SELECT MIN(W1.coins_needed)
+                      FROM Wands W1)
 (참고 : https://techblog-history-younghunjo1.tistory.com/165)
