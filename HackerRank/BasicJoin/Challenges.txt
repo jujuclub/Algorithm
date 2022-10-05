@@ -1,0 +1,3 @@
+SELECT Hackers.hacker_id, Hackers.name, COUNT(*) AS challenges_created
+
+(참고 : https://techblog-history-younghunjo1.tistory.com/157)
