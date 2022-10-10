@@ -1,0 +1,15 @@
+def solution(X, Y):
+    answer = []
+    for i in (set(X) & set(Y)):
+        for j in range(min(X.count(i), Y.count(i))):
+            answer.append(i)
+    answer.sort(reverse=True)
+
+    if len(answer) == 0:
+        return '-1'
+    if answer[0] == '0':
+        return '0'
+    answer = ''.join(answer)
+    return answer
+
+(참고 : https://velog.io/@minmong/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EC%88%AB%EC%9E%90-%EC%A7%9D%EA%BF%8D-Python-velog)
