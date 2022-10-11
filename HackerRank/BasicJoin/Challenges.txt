@@ -3,5 +3,10 @@ FROM Hackers
   INNER JOIN Challenges ON Hackers.hacker_id = Challenges.hacker_id
 GROUP BY Hackers.hacker_id, Hackers.name
 HAVING challenges_created IN (SELECT sub2.challenges_created
-                              FROM ())
+                              FROM (SELECT hacker_id, COUNT(*) AS challenges_created
+                                    FROM Challenges
+                                    GROUP BY Challenges.hacker_id) sub2
+                              GROUP BY sub2.challenges_created
+                              HAVING COUNT(*) = 1)
+    OR challenges_created = ()
 (참고 : https://techblog-history-younghunjo1.tistory.com/157)
