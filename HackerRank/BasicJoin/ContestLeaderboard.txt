@@ -1,0 +1,4 @@
+SELECT m.hacker_id, h.name, SUM(m.score) AS total_score
+FROM ()
+
+(참고 : https://mjs1995.tistory.com/95)
