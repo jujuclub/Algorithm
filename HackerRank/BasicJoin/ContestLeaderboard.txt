@@ -1,4 +1,5 @@
 SELECT m.hacker_id, h.name, SUM(m.score) AS total_score
-FROM ()
+FROM ( SELECT hacker_id, challenge_id, MAX(score) AS score
+       FROM Submissions GROUP BY hacker_id, challenge_id) AS m
 
 (참고 : https://mjs1995.tistory.com/95)
