@@ -1,0 +1,4 @@
+SELECT Start_Date, MIN(End_Date)
+FROM ()
+
+(참고 : https://ysyblog.tistory.com/m/204)
