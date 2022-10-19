@@ -1,4 +1,4 @@
 SELECT Start_Date, MIN(End_Date)
-FROM ()
+FROM (SELECT Start_Date FROM Projects WHERE Start_Date NOT IN (SELECT End_Date FROM Projects)) AS s.
 
 (참고 : https://ysyblog.tistory.com/m/204)
