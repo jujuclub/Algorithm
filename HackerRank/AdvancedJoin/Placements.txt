@@ -1,4 +1,6 @@
 SELECT sub.Name
-FROM()
+FROM(SELECT f.ID, s.Name, f.Friend_ID, p.Salary AS me_Salary
+     FROM Students s
+     INNER JOIN Friends f ON s.ID = f.ID)
 
 (참고 : https://techblog-history-younghunjo1.tistory.com/172)
