@@ -1,3 +1,5 @@
+babbling = ["aya", "yee", "u", "maa", "wyeoo"]
+
 def solution(babbling):
     can_speak = ['aya', 'ye', 'woo', 'ma']
 
