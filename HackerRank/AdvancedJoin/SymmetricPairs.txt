@@ -1,3 +1,4 @@
-
+SELECT sub.X, sub.Y
+FROM () sub
 
 (참고 : https://hanawithdata.tistory.com/entry/hackerrank-Symmetric-Pairs)
