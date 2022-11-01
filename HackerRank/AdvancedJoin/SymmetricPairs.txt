@@ -1,4 +1,8 @@
 SELECT sub.X, sub.Y
-FROM () sub
+FROM (SELECT if(X <= Y, X, Y) AS X, if(X <= Y, Y, X) AS Y
+      FROM Functions) sub
+GROUP BY sub.X, sub.Y
+HAVING count(*) >= 2
+ORDER BY sub.X;
 
 (참고 : https://hanawithdata.tistory.com/entry/hackerrank-Symmetric-Pairs)
