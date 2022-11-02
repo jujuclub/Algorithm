@@ -9,7 +9,7 @@ temp = []
             if can_speak[j] + can_speak[j] in babbling[i]:
                 continue
             if can_speak[j] in babbling[i]:
-                babbling[i] = babbling[i].replace(can_speak[j], "")
+                babbling[i] = babbling[i].replace(can_speak[j], "?")
                 temp.append(babbling)
     
     return babbling.count('')
