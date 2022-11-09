@@ -1,5 +1,5 @@
 SELECT GROUP_CONCAT(NUMB SEPARATOR '&')
 FROM (SELECT @num:=@num+1 AS NUMB)
-      FROM information_schema
+      FROM information_schema.tables t1,
 
 (참고 : https://techblog-history-younghunjo1.tistory.com/173)
