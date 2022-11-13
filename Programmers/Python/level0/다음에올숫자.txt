@@ -2,6 +2,9 @@ def solution(common):
     answer = 0
     a, b, c = common[:3]
     if (b-a == c-b):
+        answer = common[-1] + (b-a)
+    elif (b/a == c/b):
+        answer = common[-1] * (b/a)
     return answer
 
 (참고 : https://kioworks.tistory.com/484?category=720931)
