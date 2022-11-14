@@ -1,0 +1,5 @@
+def solution(num, total):
+    answer = []
+    return answer
+
+(참고 : )
