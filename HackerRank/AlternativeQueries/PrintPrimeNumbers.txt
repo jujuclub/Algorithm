@@ -5,5 +5,7 @@ FROM (SELECT @num:=@num+1 AS NUMB
            (SELECT @num:=1) tmp
       ) tempNum
 WHERE NUMB <= 1000
+AND NOT EXISTS(SELECT *
+               FROM (SELECT ))
 
 (참고 : https://techblog-history-younghunjo1.tistory.com/173)
