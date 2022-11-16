@@ -1,6 +1,6 @@
 def solution(num, total):
     a = 0
-    for i in range():
+    for i in range(num):
         a += i 
     answer = []
     return answer
