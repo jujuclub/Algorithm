@@ -1,8 +1,10 @@
 def solution(num, total):
-    a = 0
+    anwer = 0
     for i in range(num):
         a += i 
-    answer = []
+    answer = sum(answer)
     return answer
+
+다른 문제 먼저 푼 다음에 풀어보자
 
 (참고 : )
