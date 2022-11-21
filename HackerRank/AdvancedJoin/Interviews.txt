@@ -1,0 +1,3 @@
+select ct.contest_id, ct.hacker_id
+
+(참고 : https://ysyblog.tistory.com/207)
