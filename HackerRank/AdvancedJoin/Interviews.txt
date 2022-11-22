@@ -1,3 +1,4 @@
-select ct.contest_id, ct.hacker_id
+select ct.contest_id, ct.hacker_id, ct.name, sum(ss.total_submissions), sum(ss.total_accepted_submissions), sum(vs.total_views), sum(vs.total_unique_views)
+from contests as ct
 
 (참고 : https://ysyblog.tistory.com/207)
