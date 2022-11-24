@@ -1,4 +1,10 @@
 select ct.contest_id, ct.hacker_id, ct.name, sum(ss.total_submissions), sum(ss.total_accepted_submissions), sum(vs.total_views), sum(vs.total_unique_views)
 from contests as ct
-
+    left join
+    colleges as cl
+    on ct.contest_id = cl.contest_id
+    left join
+    challenges as ch
+    on cl.college_id = ch.college_id
+    left join
 (참고 : https://ysyblog.tistory.com/207)
