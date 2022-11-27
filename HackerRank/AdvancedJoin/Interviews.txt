@@ -7,4 +7,10 @@ from contests as ct
     challenges as ch
     on cl.college_id = ch.college_id
     left join
+    (select challenge_id, sum(total_submissions) as total_submissions,
+     sum(total_accepted_submissions) as total_accepted_submissions
+     from Submission_Stats
+     group by challenge_id) as ss
+    on ch.challenge_id == ss.challenge_id 
+    left join
 (참고 : https://ysyblog.tistory.com/207)
