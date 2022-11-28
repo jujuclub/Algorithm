@@ -1,0 +1,7 @@
+def solution(array):
+    answer = ''
+    for i in array:
+        asnwer += str(i)
+    return answer.count('7')
+
+(참고 : https://velog.io/@zinu/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-7%EC%9D%98-%EA%B0%9C%EC%88%98%ED%8C%8C%EC%9D%B4%EC%8D%ACmap)
