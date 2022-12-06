@@ -1,0 +1,7 @@
+def solution(n):
+    n_str = str(n)
+    n_list = []
+    for i in n_str:
+        n_list.append(int(i))
+    answer = sum(n_list)
+    return answer
