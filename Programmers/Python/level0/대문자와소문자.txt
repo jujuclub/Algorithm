@@ -1,4 +1,10 @@
 def solution(my_string):
     answer = ''
-    my_string = list(my_string)
+    for i in my_string:
+        if i.isupper():
+            answer += i.lower()
+        else:
+            answer += i.upper()
     return answer
+
+(참고 : https://velog.io/@zinu/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EB%8C%80%EB%AC%B8%EC%9E%90%EC%99%80-%EC%86%8C%EB%AC%B8%EC%9E%90%ED%8C%8C%EC%9D%B4%EC%8D%AC)
